@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contacta con MotosPro - Estamos aquí para ayudarte. Formulario de contacto, teléfono y ubicación">
+    <title>Contacto - MotosPro</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body class="font-sans antialiased">
+    
+    <!-- Header Superior -->
+    <header class="bg-gray-900 text-white py-2 text-sm">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-2">
+                <div class="flex flex-wrap justify-center md:justify-start gap-4">
+                    <a href="tel:+59123456789" class="flex items-center gap-2 hover:text-orange-500 transition">
+                        <i class="fas fa-phone"></i> +591 123 456 789
+                    </a>
+                    <a href="mailto:info@motospro.com" class="flex items-center gap-2 hover:text-orange-500 transition">
+                        <i class="fas fa-envelope"></i> info@motospro.com
+                    </a>
+                    <span class="flex items-center gap-2">
+                        <i class="fas fa-clock"></i> Lun - Vie: 9:00 - 18:00
+                    </span>
+                </div>
+                <div class="flex gap-4">
+                    <a href="#" class="hover:text-orange-500 transition"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="hover:text-orange-500 transition"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="hover:text-orange-500 transition"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#" class="hover:text-orange-500 transition"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navegación -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <a href="index.html" class="flex items-center gap-2 text-2xl font-bold">
+                
+                    <span class="text-gray-900">BG<span class="text-orange-600">MOTORS</span></span>
+                </a>
+                <ul class="hidden md:flex items-center gap-8">
+                    <li><a href="index.html" class="text-gray-700 hover:text-orange-600 font-medium transition">Inicio</a></li>
+                    <li class="relative group">
+                        <a href="motos.html" class="text-gray-700 hover:text-orange-600 font-medium transition flex items-center gap-1">
+                            Motos <i class="fas fa-chevron-down text-xs"></i>
+                        </a>
+                        <ul class="absolute left-0 top-full mt-2 bg-white shadow-xl rounded-lg py-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                            <li><a href="motos.html#deportivas" class="block px-4 py-2 text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition">Deportivas</a></li>
+                            <li><a href="motos.html#urbanas" class="block px-4 py-2 text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition">Urbanas</a></li>
+                            <li><a href="motos.html#touring" class="block px-4 py-2 text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition">Touring</a></li>
+                            <li><a href="motos.html#adventure" class="block px-4 py-2 text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition">Adventure</a></li>
+                        </ul>
+                    </li>
+                    <li class="relative group">
+                        <a href="servicios.html" class="text-gray-700 hover:text-orange-600 font-medium transition flex items-center gap-1">
+                            Servicios <i class="fas fa-chevron-down text-xs"></i>
+                        </a>
+                        <ul class="absolute left-0 top-full mt-2 bg-white shadow-xl rounded-lg py-2 w-56 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                            <li><a href="servicios.html#mantenimiento" class="block px-4 py-2 text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition">Mantenimiento</a></li>
+                            <li><a href="servicios.html#repuestos" class="block px-4 py-2 text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition">Repuestos</a></li>
+                            <li><a href="servicios.html#financiamiento" class="block px-4 py-2 text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition">Financiamiento</a></li>
+                            <li><a href="servicios.html#personalizacion" class="block px-4 py-2 text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition">Personalización</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="nosotros.html" class="text-gray-700 hover:text-orange-600 font-medium transition">Nosotros</a></li>
+                    <li><a href="contacto.html" class="text-orange-600 font-medium transition">Contacto</a></li>
+                </ul>
+                <button id="mobile-menu-btn" class="md:hidden text-gray-700 text-2xl">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            <div id="mobile-menu" class="hidden md:hidden pb-4">
+                <ul class="space-y-2">
+                    <li><a href="index.html" class="block py-2 text-gray-700 hover:text-orange-600 transition">Inicio</a></li>
+                    <li><a href="motos.html" class="block py-2 text-gray-700 hover:text-orange-600 transition">Motos</a></li>
+                    <li><a href="servicios.html" class="block py-2 text-gray-700 hover:text-orange-600 transition">Servicios</a></li>
+                    <li><a href="nosotros.html" class="block py-2 text-gray-700 hover:text-orange-600 transition">Nosotros</a></li>
+                    <li><a href="contacto.html" class="block py-2 text-orange-600 transition">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <nav class="bg-gray-100 py-3" aria-label="Breadcrumb">
+        <div class="container mx-auto px-4">
+            <ol class="flex items-center gap-2 text-sm">
+                <li><a href="index.html" class="text-gray-600 hover:text-orange-600 transition">Inicio</a></li>
+                <li class="text-gray-400">/</li>
+                <li class="text-gray-900 font-medium">Contacto</li>
+            </ol>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="relative bg-cover bg-center h-80 flex items-center overlay-dark" style="background-image: url('https://images.unsplash.com/photo-1423666639041-f56000c27a9a?w=1600&h=600&fit=crop');">
+        <div class="container mx-auto px-4 text-center text-white">
+            <h1 class="text-5xl font-bold mb-4">Contáctanos</h1>
+            <p class="text-xl">Estamos aquí para ayudarte. Escríbenos o visítanos</p>
+        </div>
+    </section>
+
+    <!-- Información Rápida -->
+    <section class="py-12 bg-gray-900 text-white">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                <div class="flex items-center gap-4">
+                    <div class="w-14 h-14 bg-orange-600 rounded-full flex items-center justify-center flex-shrink-0">
+                        <i class="fas fa-phone text-2xl"></i>
+                    </div>
+                    <div>
+                        <div class="text-gray-400 text-sm">Llámanos</div>
+                        <div class="font-bold text-lg">+591 123 456 789</div>
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-1">
+                    <div class="w-14 h-14 bg-orange-600 rounded-full flex items-center justify-center flex-shrink-0">
+                        <i class="fas fa-envelope text-2xl"></i>
+                    </div>
+                    <div>
+                        <div class="text-gray-400 text-sm">Email</div>
+                        <div class="font-bold text-lg">info@BGMOTORS.com</div>
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-4">
+                    <div class="w-14 h-14 bg-orange-600 rounded-full flex items-center justify-center flex-shrink-0">
+                        <i class="fas fa-map-marker-alt text-2xl"></i>
+                    </div>
+                    <div>
+                        <div class="text-gray-400 text-sm">Ubicación</div>
+                        <div class="font-bold text-lg">Santa cruz, Bolivia</div>
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-4">
+                    <div class="w-14 h-14 bg-orange-600 rounded-full flex items-center justify-center flex-shrink-0">
+                        <i class="fas fa-clock text-2xl"></i>
+                    </div>
+                    <div>
+                        <div class="text-gray-400 text-sm">Horario</div>
+                        <div class="font-bold text-lg">Lun - Vie: 9-18h</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formulario y Mapa -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Información de Contacto -->
+                <div>
+                    <h2 class="text-3xl font-bold text-gray-900 mb-6">Información de Contacto</h2>
+                    <p class="text-gray-600 mb-8">No dudes en contactarnos. Nuestro equipo está listo para ayudarte con cualquier consulta sobre nuestros productos y servicios.</p>
+
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-map-marker-alt text-xl text-orange-600"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-gray-900 mb-1">Dirección</h3>
+                                <p class="text-gray-600">Av. Principal 123<br>Santa Cruz, Bolivia<br>Zona Central</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-phone text-xl text-orange-600"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-gray-900 mb-1">Teléfonos</h3>
+                                <p class="text-gray-600">
+                                    Oficina: +591 123 456 789<br>
+                                    Celular: +591 987 654 321<br>
+                                    WhatsApp: +591 700 123 456
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-envelope text-xl text-orange-600"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-gray-900 mb-1">Correos Electrónicos</h3>
+                                <p class="text-gray-600">
+                                    General: info@bgmotors.com<br>
+                                    Ventas: ventas@bgmotors.com<br>
+                                    Servicio: servicio@bgmotors .com
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-clock text-xl text-orange-600"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-gray-900 mb-1">Horario de Atención</h3>
+                                <p class="text-gray-600">
+                                    Lunes a Viernes: 9:00 - 18:00<br>
+                                    Sábados: 9:00 - 14:00<br>
+                                    Domingos: Cerrado
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-share-alt text-xl text-orange-600"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-gray-900 mb-3">Redes Sociales</h3>
+                                <div class="flex gap-3">
+                                    <a href="#" class="w-10 h-10 bg-blue-600 hover:bg-blue-700 rounded-full flex items-center justify-center text-white transition">
+                                        <i class="fab fa-facebook-f"></i>
+                                    </a>
+                                    <a href="#" class="w-10 h-10 bg-pink-600 hover:bg-pink-700 rounded-full flex items-center justify-center text-white transition">
+                                        <i class="fab fa-instagram"></i>
+                                    </a>
+                                    <a href="#" class="w-10 h-10 bg-green-600 hover:bg-green-700 rounded-full flex items-center justify-center text-white transition">
+                                        <i class="fab fa-whatsapp"></i>
+                                    </a>
+                                    <a href="#" class="w-10 h-10 bg-blue-400 hover:bg-blue-500 rounded-full flex items-center justify-center text-white transition">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Formulario -->
+                <div class="bg-gray-50 rounded-xl p-8 shadow-lg">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-6">Envíanos un Mensaje</h2>
+                    <form class="space-y-6">
+                        <div>
+                            <label for="nombre" class="block text-gray-700 font-medium mb-2">Nombre Completo *</label>
+                            <input type="text" id="nombre" name="nombre" required 
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-600 focus:border-transparent transition">
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="email" class="block text-gray-700 font-medium mb-2">Correo Electrónico *</label>
+                                <input type="email" id="email" name="email" required 
+                                       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-600 focus:border-transparent transition">
+                            </div>
+
+                            <div>
+                                <label for="telefono" class="block text-gray-700 font-medium mb-2">Teléfono *</label>
+                                <input type="tel" id="telefono" name="telefono" required 
+                                       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-600 focus:border-transparent transition">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="asunto" class="block text-gray-700 font-medium mb-2">Asunto</label>
+                            <select id="asunto" name="asunto" 
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-600 focus:border-transparent transition">
+                                <option value="">Selecciona un asunto</option>
+                                <option value="consulta">Consulta General</option>
+                                <option value="cotizacion">Cotización de Moto</option>
+                                <option value="servicio">Servicio Técnico</option>
+                                <option value="repuestos">Repuestos</option>
+                                <option value="financiamiento">Financiamiento</option>
+                                <option value="otro">Otro</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label for="mensaje" class="block text-gray-700 font-medium mb-2">Mensaje *</label>
+                            <textarea id="mensaje" name="mensaje" rows="5" required 
+                                      class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-600 focus:border-transparent transition resize-none"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full bg-orange-600 hover:bg-orange-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition transform hover:scale-105">
+                            Enviar Mensaje <i class="fas fa-paper-plane ml-2"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mapa -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Nuestra Ubicación</h2>
+                <p class="text-gray-600 text-lg">Ven a visitarnos, estamos en el corazón de Santa Cruz</p>
+            </div>
+            <div class="rounded-xl overflow-hidden shadow-2xl">
+                <div class="relative h-96 bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-white">
+                    <div class="text-center">
+                        <i class="fas fa-map-marked-alt text-8xl mb-4 opacity-50"></i>
+                        <p class="text-2xl font-bold">Mapa de Ubicación</p>
+                        <p class="text-lg mt-2">Av. Principal 123, Santa Cruz - Bolivia</p>
+                        <a href="https://maps.google.com" target="_blank" 
+                           class="inline-block mt-6 bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">
+                            Ver en Google Maps <i class="fas fa-external-link-alt ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Preguntas Frecuentes -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Preguntas Frecuentes</h2>
+                <p class="text-gray-600 text-lg max-w-2xl mx-auto">Respuestas a las consultas más comunes de nuestros clientes</p>
+            </div>
+
+            <div class="max-w-4xl mx-auto space-y-4">
+                <details class="bg-gray-50 rounded-lg p-6 card-hover">
+                    <summary class="font-bold text-lg text-gray-900 cursor-pointer flex items-center justify-between">
+                        <span><i class="fas fa-question-circle text-orange-600 mr-3"></i>¿Ofrecen financiamiento?</span>
+                        <i class="fas fa-chevron-down text-orange-600"></i>
+                    </summary>
+                    <p class="mt-4 text-gray-600 pl-9">Sí, contamos con múltiples opciones de financiamiento desde 12 hasta 48 meses con tasas preferenciales. También trabajamos con los principales bancos del país.</p>
+                </details>
+
+                <details class="bg-gray-50 rounded-lg p-6 card-hover">
+                    <summary class="font-bold text-lg text-gray-900 cursor-pointer flex items-center justify-between">
+                        <span><i class="fas fa-question-circle text-orange-600 mr-3"></i>¿Las motos tienen garantía?</span>
+                        <i class="fas fa-chevron-down text-orange-600"></i>
+                    </summary>
+                    <p class="mt-4 text-gray-600 pl-9">Todas nuestras motocicletas incluyen garantía de fábrica más una extensión adicional sin costo. Además, nuestro taller especializado está disponible para cualquier servicio.</p>
+                </details>
+
+                <details class="bg-gray-50 rounded-lg p-6 card-hover">
+                    <summary class="font-bold text-lg text-gray-900 cursor-pointer flex items-center justify-between">
+                        <span><i class="fas fa-question-circle text-orange-600 mr-3"></i>¿Hacen envíos a otras ciudades?</span>
+                        <i class="fas fa-chevron-down text-orange-600"></i>
+                    </summary>
+                    <p class="mt-4 text-gray-600 pl-9">Sí, realizamos envíos a nivel nacional con empresas de transporte confiables. Los costos varían según la ubicación.</p>
+                </details>
+
+                <details class="bg-gray-50 rounded-lg p-6 card-hover">
+                    <summary class="font-bold text-lg text-gray-900 cursor-pointer flex items-center justify-between">
+                        <span><i class="fas fa-question-circle text-orange-600 mr-3"></i>¿Aceptan motos usadas?</span>
+                        <i class="fas fa-chevron-down text-orange-600"></i>
+                    </summary>
+                    <p class="mt-4 text-gray-600 pl-9">Sí, aceptamos tu moto usada como parte de pago por una nueva. Realizamos tasación sin compromiso.</p>
+                </details>
+
+                <details class="bg-gray-50 rounded-lg p-6 card-hover">
+                    <summary class="font-bold text-lg text-gray-900 cursor-pointer flex items-center justify-between">
+                        <span><i class="fas fa-question-circle text-orange-600 mr-3"></i>¿Tienen repuestos disponibles?</span>
+                        <i class="fas fa-chevron-down text-orange-600"></i>
+                    </summary>
+                    <p class="mt-4 text-gray-600 pl-9">Sí, contamos con stock permanente de repuestos originales para todas las marcas que vendemos.</p>
+                </details>
+
+                <details class="bg-gray-50 rounded-lg p-6 card-hover">
+                    <summary class="font-bold text-lg text-gray-900 cursor-pointer flex items-center justify-between">
+                        <span><i class="fas fa-question-circle text-orange-600 mr-3"></i>¿Puedo agendar un test drive?</span>
+                        <i class="fas fa-chevron-down text-orange-600"></i>
+                    </summary>
+                    <p class="mt-4 text-gray-600 pl-9">¡Por supuesto! Contacta con nosotros para agendar una prueba de manejo sin compromiso. Solo necesitas tu licencia de conducir vigente.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-20 bg-gradient-to-r from-orange-600 to-orange-500 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold mb-4">¿Tienes más preguntas?</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">No dudes en contactarnos. Nuestro equipo está listo para ayudarte</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="tel:+59123456789" class="inline-block bg-white text-orange-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition">
+                    <i class="fas fa-phone mr-2"></i> Llamar Ahora
+                </a>
+                <a href="https://wa.me/591700123456" target="_blank" class="inline-block bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition">
+                    <i class="fab fa-whatsapp mr-2"></i> WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center gap-2 text-2xl font-bold mb-4">
+                        
+                        <span>BG<span class="text-orange-600">MOTORS</span></span>
+                    </div>
+                    <p class="text-gray-400 mb-4">Tu mejor opción en motocicletas y servicios especializados.</p>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 bg-gray-800 hover:bg-orange-600 rounded-full flex items-center justify-center transition"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 hover:bg-orange-600 rounded-full flex items-center justify-center transition"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 hover:bg-orange-600 rounded-full flex items-center justify-center transition"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 hover:bg-orange-600 rounded-full flex items-center justify-center transition"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4 text-orange-600">Enlaces Rápidos</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-orange-600 transition flex items-center gap-2"><i class="fas fa-chevron-right text-xs"></i> Inicio</a></li>
+                        <li><a href="motos.html" class="text-gray-400 hover:text-orange-600 transition flex items-center gap-2"><i class="fas fa-chevron-right text-xs"></i> Catálogo</a></li>
+                        <li><a href="servicios.html" class="text-gray-400 hover:text-orange-600 transition flex items-center gap-2"><i class="fas fa-chevron-right text-xs"></i> Servicios</a></li>
+                        <li><a href="nosotros.html" class="text-gray-400 hover:text-orange-600 transition flex items-center gap-2"><i class="fas fa-chevron-right text-xs"></i> Nosotros</a></li>
+                        <li><a href="contacto.html" class="text-gray-400 hover:text-orange-600 transition flex items-center gap-2"><i class="fas fa-chevron-right text-xs"></i> Contacto</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4 text-orange-600">Servicios</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#mantenimiento" class="text-gray-400 hover:text-orange-600 transition flex items-center gap-2"><i class="fas fa-chevron-right text-xs"></i> Mantenimiento</a></li>
+                        <li><a href="#repuestos" class="text-gray-400 hover:text-orange-600 transition flex items-center gap-2"><i class="fas fa-chevron-right text-xs"></i> Repuestos</a></li>
+                        <li><a href="#financiamiento" class="text-gray-400 hover:text-orange-600 transition flex items-center gap-2"><i class="fas fa-chevron-right text-xs"></i> Financiamiento</a></li>
+                        <li><a href="#personalizacion" class="text-gray-400 hover:text-orange-600 transition flex items-center gap-2"><i class="fas fa-chevron-right text-xs"></i> Personalización</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4 text-orange-600">Contacto</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start gap-3 text-gray-400">
+                            <i class="fas fa-map-marker-alt text-orange-600 mt-1"></i>
+                            <span>Av. Principal 123<br>Santa Cruz, Bolivia</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-gray-400">
+                            <i class="fas fa-phone text-orange-600"></i>
+                            <span>+591 123 456 789</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-gray-400">
+                            <i class="fas fa-envelope text-orange-600"></i>
+                            <span>info@BGMOTORS.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 BGMOTORS. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

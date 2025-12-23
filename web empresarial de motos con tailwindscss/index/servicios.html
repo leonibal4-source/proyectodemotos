@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Servicios profesionales de mantenimiento, repuestos y personalización de motocicletas - MotosPro">
+    <title>Servicios - MotosPro</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body class="font-sans antialiased">
+    
+    <!-- Header Superior -->
+    <header class="bg-gray-900 text-white py-2 text-sm">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-2">
+                <div class="flex flex-wrap justify-center md:justify-start gap-4">
+                    <a href="tel:+59123456789" class="flex items-center gap-2 hover:text-orange-500 transition">
+                        <i class="fas fa-phone"></i> +591 123 456 789
+                    </a>
+                    <a href="mailto:info@motospro.com" class="flex items-center gap-2 hover:text-orange-500 transition">
+                        <i class="fas fa-envelope"></i> info@motospro.com
+                    </a>
+                    <span class="flex items-center gap-2">
+                        <i class="fas fa-clock"></i> Lun - Vie: 9:00 - 18:00
+                    </span>
+                </div>
+                <div class="flex gap-4">
+                    <a href="#" class="hover:text-orange-500 transition"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="hover:text-orange-500 transition"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="hover:text-orange-500 transition"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#" class="hover:text-orange-500 transition"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navegación -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <a href="index.html" class="flex items-center gap-2 text-2xl font-bold">
+                    
+                    <span class="text-gray-900">BG<span class="text-orange-600">MOTORS</span></span>
+                </a>
+                <ul class="hidden md:flex items-center gap-8">
+                    <li><a href="index.html" class="text-gray-700 hover:text-orange-600 font-medium transition">Inicio</a></li>
+                    <li class="relative group">
+                        <a href="motos.html" class="text-gray-700 hover:text-orange-600 font-medium transition flex items-center gap-1">
+                            Motos <i class="fas fa-chevron-down text-xs"></i>
+                        </a>
+                        <ul class="absolute left-0 top-full mt-2 bg-white shadow-xl rounded-lg py-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                            <li><a href="motos.html#deportivas" class="block px-4 py-2 text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition">Deportivas</a></li>
+                            <li><a href="motos.html#urbanas" class="block px-4 py-2 text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition">Urbanas</a></li>
+                            <li><a href="motos.html#touring" class="block px-4 py-2 text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition">Touring</a></li>
+                            <li><a href="motos.html#adventure" class="block px-4 py-2 text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition">Adventure</a></li>
+                        </ul>
+                    </li>
+                    <li class="relative group">
+                        <a href="servicios.html" class="text-orange-600 font-medium transition flex items-center gap-1">
+                            Servicios <i class="fas fa-chevron-down text-xs"></i>
+                        </a>
+                        <ul class="absolute left-0 top-full mt-2 bg-white shadow-xl rounded-lg py-2 w-56 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                            <li><a href="#mantenimiento" class="block px-4 py-2 text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition">Mantenimiento</a></li>
+                            <li><a href="#repuestos" class="block px-4 py-2 text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition">Repuestos</a></li>
+                            <li><a href="#financiamiento" class="block px-4 py-2 text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition">Financiamiento</a></li>
+                            <li><a href="#personalizacion" class="block px-4 py-2 text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition">Personalización</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="nosotros.html" class="text-gray-700 hover:text-orange-600 font-medium transition">Nosotros</a></li>
+                    <li><a href="contacto.html" class="text-gray-700 hover:text-orange-600 font-medium transition">Contacto</a></li>
+                </ul>
+                <button id="mobile-menu-btn" class="md:hidden text-gray-700 text-2xl">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            <div id="mobile-menu" class="hidden md:hidden pb-4">
+                <ul class="space-y-2">
+                    <li><a href="index.html" class="block py-2 text-gray-700 hover:text-orange-600 transition">Inicio</a></li>
+                    <li><a href="motos.html" class="block py-2 text-gray-700 hover:text-orange-600 transition">Motos</a></li>
+                    <li><a href="servicios.html" class="block py-2 text-orange-600 transition">Servicios</a></li>
+                    <li><a href="nosotros.html" class="block py-2 text-gray-700 hover:text-orange-600 transition">Nosotros</a></li>
+                    <li><a href="contacto.html" class="block py-2 text-gray-700 hover:text-orange-600 transition">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <nav class="bg-gray-100 py-3" aria-label="Breadcrumb">
+        <div class="container mx-auto px-4">
+            <ol class="flex items-center gap-2 text-sm">
+                <li><a href="index.html" class="text-gray-600 hover:text-orange-600 transition">Inicio</a></li>
+                <li class="text-gray-400">/</li>
+                <li class="text-gray-900 font-medium">Servicios</li>
+            </ol>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="relative bg-cover bg-center h-80 flex items-center overlay-dark" style="background-image: url('https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=1600&h=600&fit=crop');">
+        <div class="container mx-auto px-4 text-center text-white">
+            <h1 class="text-5xl font-bold mb-4">Nuestros Servicios</h1>
+            <p class="text-xl">Atención integral para tu motocicleta con los mejores profesionales</p>
+        </div>
+    </section>
+
+    <!-- Mantenimiento -->
+    <section id="mantenimiento" class="py-20 bg-yellow-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Mantenimiento Profesional</h2>
+                <p class="text-gray-600 text-lg max-w-2xl mx-auto">Mantén tu moto en perfecto estado con nuestros servicios técnicos especializados</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8  ">
+                <div class="bg-gray-50 rounded-xl p-8 text-center card-hover border-t-4 border-orange-600 shadow-2xl ">
+                    <div class="w-20 h-20 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-wrench text-3xl text-orange-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Preventivo</h3>
+                    <p class="text-gray-600">Revisión cada 5,000 km: aceite, filtros, ajustes, frenos y neumáticos.</p>
+                </div>
+
+                <div class="bg-gray-50 rounded-xl p-8 text-center card-hover border-t-4 border-orange-600 shadow-2xl">
+                    <div class="w-20 h-20 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-cogs text-3xl text-orange-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Correctivo</h3>
+                    <p class="text-gray-600">Reparación de motor, sistema eléctrico, suspensión con garantía.</p>
+                </div>
+
+                <div class="bg-gray-50 rounded-xl p-8 text-center card-hover border-t-4 border-orange-600 shadow-2xl">
+                    <div class="w-20 h-20 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-laptop-medical text-3xl text-orange-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Diagnóstico</h3>
+                    <p class="text-gray-600">Escaneo completo del sistema electrónico y detección de fallas.</p>
+                </div>
+
+                <div class="bg-gray-50 rounded-xl p-8 text-center card-hover border-t-4 border-orange-600 shadow-2xl">
+                    <div class="w-20 h-20 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-clipboard-check text-3xl text-orange-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Pre-ITV</h3>
+                    <p class="text-gray-600">Preparación para inspección técnica con ajustes necesarios.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Repuestos -->
+    <section id="repuestos" class="py-20 bg-gray-300  ">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Repuestos y Accesorios</h2>
+                <p class="text-gray-600 text-lg max-w-2xl mx-auto">Stock completo de repuestos originales y accesorios de calidad</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white rounded-xl p-8 text-center card-hover">
+                    <div class="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-tools text-3xl text-blue-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Originales</h3>
+                    <p class="text-gray-600">Amplio inventario de repuestos originales con garantía de fábrica.</p>
+                </div>
+
+                <div class="bg-white rounded-xl p-8 text-center card-hover">
+                    <div class="w-20 h-20 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-bolt text-3xl text-yellow-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Eléctrico</h3>
+                    <p class="text-gray-600">Baterías, alternadores, reguladores y sistema de luces.</p>
+                </div>
+
+                <div class="bg-white rounded-xl p-8 text-center card-hover">
+                    <div class="w-20 h-20 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-motorcycle text-3xl text-red-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Motor</h3>
+                    <p class="text-gray-600">Pistones, bielas, cadenas, embragues y componentes del motor.</p>
+                </div>
+
+                <div class="bg-white rounded-xl p-8 text-center card-hover">
+                    <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-helmet-safety text-3xl text-green-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Accesorios</h3>
+                    <p class="text-gray-600">Cascos, chaquetas, guantes, maletas y protecciones.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Financiamiento -->
+    <section id="financiamiento" class="py-20 bg-yellow-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Planes de Financiamiento</h2>
+                <p class="text-gray-600 text-lg max-w-2xl mx-auto">Facilidades de pago adaptadas a tu presupuesto</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-gradient-to-br from-orange-500 to-orange-600 text-white rounded-xl p-8 text-center card-hover">
+                    <i class="fas fa-credit-card text-5xl mb-4"></i>
+                    <h3 class="text-2xl font-bold mb-3">Crédito Directo</h3>
+                    <p class="text-orange-100 mb-4">12 a 48 meses con tasas preferenciales</p>
+                    <div class="text-3xl font-bold mb-2">0% Interés*</div>
+                    <p class="text-sm text-orange-100">*Consultar condiciones</p>
+                </div>
+
+                <div class="bg-white border-2 border-gray-200 rounded-xl p-8 text-center card-hover">
+                    <i class="fas fa-university text-5xl text-blue-600 mb-4"></i>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Convenios</h3>
+                    <p class="text-gray-600 mb-4">Con principales bancos del país</p>
+                    <ul class="text-left text-gray-700 space-y-2">
+                        <li><i class="fas fa-check text-green-500"></i> Tasas competitivas</li>
+                        <li><i class="fas fa-check text-green-500"></i> Múltiples opciones</li>
+                        <li><i class="fas fa-check text-green-500"></i> Aprobación rápida</li>
+                    </ul>
+                </div>
+
+                <div class="bg-white border-2 border-gray-200 rounded-xl p-8 text-center card-hover">
+                    <i class="fas fa-chart-line text-5xl text-purple-600 mb-4"></i>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Leasing</h3>
+                    <p class="text-gray-600 mb-4">Arrendamiento para empresas</p>
+                    <ul class="text-left text-gray-700 space-y-2">
+                        <li><i class="fas fa-check text-green-500"></i> Beneficios fiscales</li>
+                        <li><i class="fas fa-check text-green-500"></i> Cuotas flexibles</li>
+                        <li><i class="fas fa-check text-green-500"></i> Para flotas</li>
+                    </ul>
+                </div>
+
+                <div class="bg-white border-2 border-gray-200 rounded-xl p-8 text-center card-hover">
+                    <i class="fas fa-gift text-5xl text-red-600 mb-4"></i>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Especiales</h3>
+                    <p class="text-gray-600 mb-4">Promociones temporales</p>
+                    <ul class="text-left text-gray-700 space-y-2">
+                        <li><i class="fas fa-check text-green-500"></i> Descuentos al contado</li>
+                        <li><i class="fas fa-check text-green-500"></i> Bonificaciones</li>
+                        <li><i class="fas fa-check text-green-500"></i> Sin enganche</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Personalización -->
+    <section id="personalizacion" class="py-20 bg-gray-300">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Personalización y Customización</h2>
+                <p class="text-gray-600 text-lg max-w-2xl mx-auto">Convierte tu moto en única con nuestros servicios</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover">
+                    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=300&fit=crop" alt="Pintura Custom" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center gap-3 mb-3">
+                            <i class="fas fa-paint-brush text-2xl text-orange-600"></i>
+                            <h3 class="text-xl font-bold text-gray-900">Pintura Custom</h3>
+                        </div>
+                        <p class="text-gray-600">Diseños personalizados, aerografía profesional y acabados premium.</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover">
+                    <img src="https://images.unsplash.com/photo-1558981852-426c6c22a060?w=600&h=300&fit=crop" alt="Iluminación LED" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center gap-3 mb-3">
+                            <i class="fas fa-lightbulb text-2xl text-orange-600"></i>
+                            <h3 class="text-xl font-bold text-gray-900">Iluminación LED</h3>
+                        </div>
+                        <p class="text-gray-600">Luces LED, tiras RGB, faros auxiliares y sistemas personalizados.</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover">
+                    <img src="https://imgs.search.brave.com/uFKQFwc5NsSj78uYNJB1gV0x6BsRBhi1RBSOjUx4Md0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/bGVyZXBhaXJlZGVz/bW90YXJkcy5jb20v/aW1nL3RlY2huaXF1/ZS90ZWNobmlxdWUt/bW90ZXVyLWNhZHJl/LW1vdG9ncC5qcGc">
+                    <div class="p-6">
+                        <div class="flex items-center gap-3 mb-3">
+                            <i class="fas fa-tachometer-alt text-2xl text-orange-600"></i>
+                            <h3 class="text-xl font-bold text-gray-900">Performance</h3>
+                        </div>
+                        <p class="text-gray-600">Escapes deportivos, filtros de alto flujo, reprogramación ECU.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-20 bg-gradient-to-r from-orange-600 to-orange-500 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold mb-4">¿Listo para darle el mejor servicio a tu moto?</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Agenda una cita con nuestros expertos y mantén tu motocicleta en perfecto estado</p>
+            <a href="contacto.html" class="inline-block bg-white text-orange-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-700 transition transform hover:scale-105">
+                Agendar Cita <i class="fas fa-calendar-check ml-2"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center gap-2 text-2xl font-bold mb-4">
+                        
+                        <span>BG<span class="text-orange-600">MOTORS</span></span>
+                    </div>
+                    <p class="text-gray-400 mb-4">Tu mejor opción en motocicletas y servicios especializados.</p>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 bg-gray-800 hover:bg-orange-600 rounded-full flex items-center justify-center transition"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 hover:bg-orange-600 rounded-full flex items-center justify-center transition"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 hover:bg-orange-600 rounded-full flex items-center justify-center transition"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 hover:bg-orange-600 rounded-full flex items-center justify-center transition"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4 text-orange-600">Enlaces Rápidos</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-orange-600 transition flex items-center gap-2"><i class="fas fa-chevron-right text-xs"></i> Inicio</a></li>
+                        <li><a href="motos.html" class="text-gray-400 hover:text-orange-600 transition flex items-center gap-2"><i class="fas fa-chevron-right text-xs"></i> Catálogo</a></li>
+                        <li><a href="servicios.html" class="text-gray-400 hover:text-orange-600 transition flex items-center gap-2"><i class="fas fa-chevron-right text-xs"></i> Servicios</a></li>
+                        <li><a href="nosotros.html" class="text-gray-400 hover:text-orange-600 transition flex items-center gap-2"><i class="fas fa-chevron-right text-xs"></i> Nosotros</a></li>
+                        <li><a href="contacto.html" class="text-gray-400 hover:text-orange-600 transition flex items-center gap-2"><i class="fas fa-chevron-right text-xs"></i> Contacto</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4 text-orange-600">Servicios</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#mantenimiento" class="text-gray-400 hover:text-orange-600 transition flex items-center gap-2"><i class="fas fa-chevron-right text-xs"></i> Mantenimiento</a></li>
+                        <li><a href="#repuestos" class="text-gray-400 hover:text-orange-600 transition flex items-center gap-2"><i class="fas fa-chevron-right text-xs"></i> Repuestos</a></li>
+                        <li><a href="#financiamiento" class="text-gray-400 hover:text-orange-600 transition flex items-center gap-2"><i class="fas fa-chevron-right text-xs"></i> Financiamiento</a></li>
+                        <li><a href="#personalizacion" class="text-gray-400 hover:text-orange-600 transition flex items-center gap-2"><i class="fas fa-chevron-right text-xs"></i> Personalización</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4 text-orange-600">Contacto</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start gap-3 text-gray-400">
+                            <i class="fas fa-map-marker-alt text-orange-600 mt-1"></i>
+                            <span>Av. Principal 123<br>Santa Cruz, Bolivia</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-gray-400">
+                            <i class="fas fa-phone text-orange-600"></i>
+                            <span>+591 123 456 789</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-gray-400">
+                            <i class="fas fa-envelope text-orange-600"></i>
+                            <span>info@BGMOTORS.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 BGMOTORS. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
